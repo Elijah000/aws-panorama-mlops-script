@@ -11,7 +11,7 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
-image="gary-yolov5-train"
+image="yolov7"
 
 # Get the account number associated with the current IAM credentials
 dst_id=$(aws sts get-caller-identity --query Account --output text)
@@ -25,7 +25,7 @@ then
     src_region="cn-north-1"
     aws_endpoint="amazonaws.com.cn"
 else
-    src_id=201125699002
+    src_id=369806622574
     src_region="ap-southeast-1"
     aws_endpoint="amazonaws.com"
 fi
